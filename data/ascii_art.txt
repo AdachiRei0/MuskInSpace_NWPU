@@ -1,0 +1,274 @@
+                             /\
+                            /  \
+                           /    \
+                          /______\
+                         /\      /\
+                        /  \    /  \
+                       /    \  /    \
+                      /______\/______\
+                     /\              /\
+                    /  \            /  \
+                   /    \          /    \
+                  /______\        /______\
+                 /\      /\      /\      /\
+                /  \    /  \    /  \    /  \
+               /    \  /    \  /    \  /    \
+              /______\/______\/______\/______\
+             |                                |
+             |         STARSHIP SN24          |
+             |________________________________|
+            /                                  \
+           /                                    \
+          /                                      \
+         /                                        \
+        /                                          \
+       /                                            \
+      /                                              \
+     /                                                \
+    /                                                  \
+   ████████████████████████████████████████████████████████
+   
+   
+        ███╗   ███╗██╗   ██╗███████╗██╗  ██╗    ██╗███╗   ██╗
+        ████╗ ████║██║   ██║██╔════╝██║ ██╔╝    ██║████╗  ██║
+        ██╔████╔██║██║   ██║███████╗█████╔╝     ██║██╔██╗ ██║
+        ██║╚██╔╝██║██║   ██║╚════██║██╔═██╗     ██║██║╚██╗██║
+        ██║ ╚═╝ ██║╚██████╔╝███████║██║  ██╗    ██║██║ ╚████║
+        ╚═╝     ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝╚═╝  ╚═══╝
+        
+        ███████╗██████╗  █████╗  ██████╗███████╗
+        ██╔════╝██╔══██╗██╔══██╗██╔════╝██╔════╝
+        ███████╗██████╔╝███████║██║     █████╗  
+        ╚════██║██╔═══╝ ██╔══██║██║     ██╔══╝  
+        ███████║██║     ██║  ██║╚██████╗███████╗
+        ╚══════╝╚═╝     ╚═╝  ╚═╝ ╚═════╝╚══════╝
+        
+        ╔════════════════════════════════════════════╗
+        ║           SYSTEMS INITIALIZING...          ║
+        ║     LAUNCH SEQUENCE: T-MINUS 10...9...8... ║
+        ╚════════════════════════════════════════════╝
+case    : printf("                                        ^\n");
+    case    : printf("                                       / \\\n");
+    case    : printf("                                      /   \\\n");
+    case    : printf("                                     /     \\\n");
+    case    : printf("                                    /       \\\n");
+    case    : printf("                                   /_________\\\n");
+    case    : printf("                                  |           |\n");
+    case    : printf("                                  |           |\n");
+    case    : printf("                                  |           |\n");
+    case    : printf("                                  |           |\n");
+    case    : printf("                                  |  MUSK-IX  |\n");
+    case    : printf("                                  |  HEAVY    |\n");
+    case    : printf("                                  |           |\n");
+    case    : printf("                                  |           |\n");
+    case    : printf("                                  |           |\n");
+    case    : printf("                                 /|           |\\\n");
+    case    : printf("                                / |           | \\\n");
+    case    : printf("                               |  |           |  |\n");
+    case    : printf("                               |  |           |  |\n");
+    case    : printf("                               |  |           |  |\n");
+    case    : printf("                               |  |           |  |\n");
+    case    : printf("                               |  |  FUEL     |  |\n");
+    case    : printf("                               |  |  TANK     |  |\n");
+    case    : printf("                               |  |           |  |\n");
+    case    : printf("                               |  |           |  |\n");
+    case    : printf("                               |  |           |  |\n");
+    case    : printf("                               |  |           |  |\n");
+    case    : printf("                              /|  |           |  |\\\n");
+    case    : printf("                             / |  |           |  | \\\n");
+    case    : printf("                            |   |  |           |  |   |\n");
+    case    : printf("                            |   |  |           |  |   |\n");
+    case    : printf("                            |   |  |           |  |   |\n");
+    case    : printf("                            |   |  |   MAIN    |  |   |\n");
+    case    : printf("                            |   |  |   STAGE   |  |   |\n");
+    case    : printf("                            |   |  |           |  |   |\n");
+    case    : printf("                            |   |  |           |  |   |\n");
+    case    : printf("                            |   |  |           |  |   |\n");
+    case    : printf("                            |   |  |           |  |   |\n");
+    case    : printf("                           /|   |  |           |  |   |\\\n");
+    case    : printf("                          / |   |  |           |  |   | \\\n");
+    case    : printf("                    ________/  |   |  |           |  |   |  \\________\n");
+    case    : printf("                   |            |   |  |           |  |   |            |\n");
+    case    : printf("                   |   BOOSTER  |   |  |           |  |   |  BOOSTER   |\n");
+    case    : printf("                   |     1      |   |  |           |  |   |      2     |\n");
+    case    : printf("                   |____________|   |  |           |  |   |____________|\n");
+    case    : printf("                         \\          |  |           |  |          /\n");
+    case    : printf("                          \\         |  |           |  |         /\n");
+    case    : printf("                           \\        |  |           |  |        /\n");
+    case    : printf("                            \\       |  |           |  |       /\n");
+    case    : printf("                             \\      |  |           |  |      /\n");
+    case    : printf("                              \\     |  |           |  |     /\n");
+    case    : printf("                               \\    |  |           |  |    /\n");
+    case    : printf("                                \\   |  |           |  |   /\n");
+    case    : printf("                                 \\  |  |           |  |  /\n");
+    case    : printf("                                  \\ |  |           |  | /\n");
+    case    : printf("                                   \\|  |           |  |/\n");
+    case    : printf("                                    \\  |           |  /\n");
+    case    : printf("                                     \\ |           | /\n");
+    case    : printf("                                      \\|           |/\n");
+    case    : printf("                                       \\           /\n");
+    case    : printf("                                        \\_________/\n");
+    case    : printf("                                       /|\\     /|\\\n");
+    case    : printf("                                      //|\\\\   //|\\\\\n");
+    case    : printf("                                     ///|\\\\\\ ///|\\\\\\\n");
+    case    : printf("                                    ////|\\\\\\\\////|\\\\\\\\\n");
+    case    : printf("                                   /////|\\\\\\\\\\/////|\\\\\\\\\\\n");
+    case    : printf("                                  //////|\\\\\\\\\\//////|\\\\\\\\\\\n");
+    case    : printf("                                 ///////|\\\\\\\\\\///////|\\\\\\\\\\\n");
+    case    : printf("                                ////////|\\\\\\\\\\////////|\\\\\\\\\\\n");
+    case    : printf("                               /////////|\\\\\\\\\\/////////|\\\\\\\\\\\n");
+    case    : printf("                              //////////|\\\\\\\\\\//////////|\\\\\\\\\\\n");
+    case    : printf("                             ///////////|\\\\\\\\\\///////////|\\\\\\\\\\\n");
+    case    : printf("                            ////////////|\\\\\\\\\\////////////|\\\\\\\\\\\n");
+    case    : printf("                           /////////////|\\\\\\\\\\/////////////|\\\\\\\\\\\n");
+    case    : printf("                          //////////////|\\\\\\\\\\//////////////|\\\\\\\\\\\n");
+    case    : printf("                         ///////////////|\\\\\\\\\\///////////////|\\\\\\\\\\\n");
+    case    : printf("                        ////////////////|\\\\\\\\\\////////////////|\\\\\\\\\\\n");
+    case    : printf("\n\n");
+
+
+
+
+
+
+
+
+
+
+
+
+    case    : printf("        ███╗   ███╗██╗   ██╗███████╗██╗  ██╗    ██╗███╗   ██╗\n");
+    case    : printf("        ████╗ ████║██║   ██║██╔════╝██║ ██╔╝    ██║████╗  ██║\n");
+    case    : printf("        ██╔████╔██║██║   ██║███████╗█████╔╝     ██║██╔██╗ ██║\n");
+    case    : printf("        ██║╚██╔╝██║██║   ██║╚════██║██╔═██╗     ██║██║╚██╗██║\n");
+    case    : printf("        ██║ ╚═╝ ██║╚██████╔╝███████║██║  ██╗    ██║██║ ╚████║\n");
+    case    : printf("        ╚═╝     ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝╚═╝  ╚═══╝\n\n");
+    case    : printf("        ███████╗██████╗  █████╗  ██████╗███████╗\n");
+    case    : printf("        ██╔════╝██╔══██╗██╔══██╗██╔════╝██╔════╝\n");
+    case    : printf("        ███████╗██████╔╝███████║██║     █████╗  \n");
+    case    : printf("        ╚════██║██╔═══╝ ██╔══██║██║     ██╔══╝  \n");
+    case    : printf("        ███████║██║     ██║  ██║╚██████╗███████╗\n");
+    case    : printf("        ╚══════╝╚═╝     ╚═╝  ╚═╝ ╚═════╝╚══════╝\n\n");
+    case    : printf("        ╔════════════════════════════════════════════╗\n");
+    case    : printf("        ║           SYSTEMS INITIALIZING...          ║\n");
+    case    : printf("        ║     LAUNCH SEQUENCE: T-MINUS 10...9...8... ║\n");
+    case    : printf("        ╚════════════════════════════════════════════╝\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("\n");
+    case    : printf("                                        ^\n");
+    case    : printf("                                       / \\\n");
+    case    : printf("                                      /   \\\n");
+    case    : printf("                                     /     \\\n");
+    case    : printf("                                    /       \\\n");
+    case    : printf("                                   /_________\\\n");
+    case    : printf("                                  |           |\n");
+    case    : printf("                                  |           |\n");
+    case    : printf("                                  |           |\n");
+    case    : printf("                                  |           |\n");
+    case    : printf("                                  |  MUSK-IX  |\n");
+    case    : printf("                                  |  HEAVY    |\n");
+    case    : printf("                                  |           |\n");
+    case    : printf("                                  |           |\n");
+    case    : printf("                                  |           |\n");
+    case    : printf("                                 /|           |\\\n");
+    case    : printf("                                / |           | \\\n");
+    case    : printf("                               |  |           |  |\n");
+    case    : printf("                               |  |           |  |\n");
+    case    : printf("                               |  |           |  |\n");
+    case    : printf("                               |  |           |  |\n");
+    case    : printf("                               |  |  FUEL     |  |\n");
+    case    : printf("                               |  |  TANK     |  |\n");
+    case    : printf("                               |  |           |  |\n");
+    case    : printf("                               |  |           |  |\n");
+    case    : printf("                               |  |           |  |\n");
+    case    : printf("                               |  |           |  |\n");
+    case    : printf("                              /|  |           |  |\\\n");
+    case    : printf("                             / |  |           |  | \\\n");
+    case    : printf("                            |   |  |           |  |   |\n");
+    case    : printf("                            |   |  |           |  |   |\n");
+    case    : printf("                            |   |  |           |  |   |\n");
+    case    : printf("                            |   |  |   MAIN    |  |   |\n");
+    case    : printf("                            |   |  |   STAGE   |  |   |\n");
+    case    : printf("                            |   |  |           |  |   |\n");
+    case    : printf("                            |   |  |           |  |   |\n");
+    case    : printf("                            |   |  |           |  |   |\n");
+    case    : printf("                            |   |  |           |  |   |\n");
+    case    : printf("                           /|   |  |           |  |   |\\\n");
+    case    : printf("                          / |   |  |           |  |   | \\\n");
+    case    : printf("                    ________/  |   |  |           |  |   |  \\________\n");
+    case    : printf("                   |            |   |  |           |  |   |            |\n");
+    case    : printf("                   |   BOOSTER  |   |  |           |  |   |  BOOSTER   |\n");
+    case    : printf("                   |     1      |   |  |           |  |   |      2     |\n");
+    case    : printf("                   |____________|   |  |           |  |   |____________|\n");
+    case    : printf("                         \\          |  |           |  |          /\n");
+    case    : printf("                          \\         |  |           |  |         /\n");
+    case    : printf("                           \\        |  |           |  |        /\n");
+    case    : printf("                            \\       |  |           |  |       /\n");
+    case    : printf("                             \\      |  |           |  |      /\n");
+    case    : printf("                              \\     |  |           |  |     /\n");
+    case    : printf("                               \\    |  |           |  |    /\n");
+    case    : printf("                                \\   |  |           |  |   /\n");
+    case    : printf("                                 \\  |  |           |  |  /\n");
+    case    : printf("                                  \\ |  |           |  | /\n");
+    case    : printf("                                   \\|  |           |  |/\n");
+    case    : printf("                                    \\  |           |  /\n");
+    case    : printf("                                     \\ |           | /\n");
+    case    : printf("                                      \\|           |/\n");
+    case    : printf("                                       \\           /\n");
+    case    : printf("                                        \\_________/\n");
+    case    : printf("                                       /|\\     /|\\\n");
+    case    : printf("                                      //|\\\\   //|\\\\\n");
+    case    : printf("                                     ///|\\\\\\ ///|\\\\\\\n");
+    case    : printf("                                    ////|\\\\\\\\////|\\\\\\\\\n");
+    case    : printf("                                   /////|\\\\\\\\\\/////|\\\\\\\\\\\n");
+    case    : printf("                                  //////|\\\\\\\\\\//////|\\\\\\\\\\\n");
+    case    : printf("                                 ///////|\\\\\\\\\\///////|\\\\\\\\\\\n");
+    case    : printf("                                ////////|\\\\\\\\\\////////|\\\\\\\\\\\n");
+    case    : printf("                               /////////|\\\\\\\\\\/////////|\\\\\\\\\\\n");
+    case    : printf("                              //////////|\\\\\\\\\\//////////|\\\\\\\\\\\n");
+    case    : printf("                             ///////////|\\\\\\\\\\///////////|\\\\\\\\\\\n");
+    case    : printf("                            ////////////|\\\\\\\\\\////////////|\\\\\\\\\\\n");
+    case    : printf("                           /////////////|\\\\\\\\\\/////////////|\\\\\\\\\\\n");
+    case    : printf("                          //////////////|\\\\\\\\\\//////////////|\\\\\\\\\\\n");
+    case    : printf("                         ///////////////|\\\\\\\\\\///////////////|\\\\\\\\\\\n");
+    case    : printf("                        ////////////////|\\\\\\\\\\////////////////|\\\\\\\\\\\n");
+    case    : printf("\n\n");
