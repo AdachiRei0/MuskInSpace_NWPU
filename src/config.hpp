@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
+#include "tools.hpp"
 
 #define WIDTH 120       // width of screen
 #define HEIGHT 40       // height of screen
