@@ -16,6 +16,7 @@
 
 #define KEY_UP (256 + 1)       // up-direction key
 #define KEY_DOWN (256 + 2)     // down-direction key
+// #define KEY_ENTER (256 + 13)          // enter key       // how much enter is???
 
 static struct termios original_termios;
 static bool is_terminal_raw_mode = false;

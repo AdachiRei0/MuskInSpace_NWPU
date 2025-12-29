@@ -7,6 +7,7 @@
 
 #define KEY_UP 72       // up-direction key
 #define KEY_DOWN 80     // down-direction key
+#define KEY_ENTER 13    // enter key
 
 void HideCursor() {
     HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);

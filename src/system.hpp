@@ -3,7 +3,7 @@
 
 #include "game.hpp"
 
-int system() {
+bool system() {
     player P;
     screen Screen;
     timer Timer;
@@ -15,9 +15,7 @@ int system() {
         Logic(&P, &Screen);  // flesh and judge game condition
         AutoSleep(&Timer);  // automately judge time whether if need to sleep
     }
-    End(&P);       // process after game over
-    
-    return 0;
+    return End(&P);       // process after game over
 }
 
 #endif

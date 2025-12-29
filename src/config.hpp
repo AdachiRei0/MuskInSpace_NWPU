@@ -3,9 +3,17 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdarg.h>
 #include <time.h>
 #include <string.h>
-#include "tools.hpp"
+
+typedef int menu_t;
+#define MAIN_MENU 0
+#define START_GAME 1
+#define HELP 2
+#define SCOREBOARD 3
+#define SETTINGS 4
+#define EXIT 5
 
 #define WIDTH 120       // width of screen
 #define HEIGHT 40       // height of screen
@@ -17,6 +25,7 @@
 #define WIN_CONDITION 1000      // score to win
 #define READY_TIME 5000     // time before game starts
 #define WORDS_MOVE_TIME 400     // time of words moving
+#define THANK_TIME 1000        // time of thank you words
 #define F 2000       // frequency of obstacle appearance
 #define BOUND 150000    // boundary of obstacle file
 #define MAP_BOUND ((WIDTH + 1) * WIN_CONDITION)    // boundary of obstacle file

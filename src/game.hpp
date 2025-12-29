@@ -6,6 +6,7 @@
 #include "player.hpp"
 #include "timer.hpp"
 #include "platform/platform.hpp"
+#include "tools.hpp"
 
 IMPORT_SCREEN_HPP
 IMPORT_PLAYER_HPP
@@ -20,7 +21,7 @@ void Logic(player*, screen*);
 void AutoSleep(timer*);
 void HideCursor();
 void SetConsoleFullscreen();
-void End(player*);
+bool End(player*);
 
 
 void Setup(player *P, screen *Screen, timer *Timer){
@@ -148,7 +149,7 @@ void AutoSleep(timer *Timer){
     return;
 }
 
-void End(player *P){
+bool End(player *P){
     char key = 0;       // get player's pressed key
     P->mem.score--;         // descend score because of death
     if(gameOver){
@@ -159,14 +160,14 @@ void End(player *P){
     printf("press 'q' to quit, \nand 'r' to return start menu...");
     while((key = PF_getch()) != 'q'){
         if(key == 'r'){
-            SetConsoleFullscreen();
+//            SetConsoleFullscreen();
             PF_system_cls();
 //            main();
-            return;
+            return true;
         }
         continue;
     }
-    return;
+    return false;
 }
 
 #endif

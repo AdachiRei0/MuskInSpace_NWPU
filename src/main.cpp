@@ -1,9 +1,18 @@
 #include "system.hpp"
-#include "gui.hpp"
+#include "GUI/gui.hpp"
 
 int main() {
     CallStartMenu();    // start menu
-    ShowPlot();         // show plot
-    system();           // run game system
+    menu_t menu = ShowMenu();         // show main menu
+    while (true) {
+        if (menu == EXIT) {
+            PF_system_cls();    // clear screen
+            break;
+        } else {
+            PF_system_cls();    // clear screen
+            menu = MenuFunctions[menu]();   // call corresponding function
+        }
+    }
+    GoodBye();
     return 0;
 }

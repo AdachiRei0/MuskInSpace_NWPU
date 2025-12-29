@@ -1,25 +1,7 @@
-#ifndef GUI_HPP
-#define GUI_HPP
-
-#include "game.hpp"
-
-void CallStartMenu();
-void ShowBootLogo(int);
-void ShowBootBG(int);
-void ShowPlot();
-void GetchAfterFlush();
-
-void CallStartMenu(){
-    PF_SetConsoleOutputCP(65001);
-    SetConsoleFullscreen();
-    HideCursor();
-    ShowBootLogo(WORDS_MOVE_TIME);
-    PF_getch();
-    PF_system_cls();
-    ShowBootBG(WORDS_MOVE_TIME);
-    PF_system_cls();
-    return;
-}
+#ifndef BOOT_HPP
+#define BOOT_HPP
+#include "../platform/platform.hpp"
+#include "../config.hpp"
 
 void ShowBootLogo(int move_time){
     for(int i = 1; i <= 16; i++){
@@ -45,7 +27,11 @@ void ShowBootLogo(int move_time){
                 PF_system_cls();
             }
         }
+        if (PF__kbhit() && PF__getch() == KEY_ENTER) {
+            return;
+        }
     }
+    PF_getch();
     return;
 }
 
@@ -189,41 +175,10 @@ for(int i = 1; i <= 134; i++){
         }
         PF_Sleep(move_time / 5);
         PF_system_cls();
+        if (PF__kbhit() && PF__getch() == KEY_ENTER) {
+            break;
+        }
     }
-    return;
-}
-
-void ShowPlot(){
-    printf("\n\n\n\tYou are Musk. "
-        "\n\tIn 2030, your starship project is successful, "
-        "\n\tand you are on your luxurious spaceship to inspect space. "
-        "\n\tUnfortunately, your spaceship encounters some malfunctions, "
-        "\n\tand you have to return without relying on the main power of the spaceship. "
-        "\n\tWhat's even more ironic is that in the space from outer space to the top of the atmosphere, "
-        "\n\tthere is a lot of space debris that you previously discarded recklessly, "
-        "\n\tand now they have become your trouble. "
-        "\n\tHowever, you can still control your spaceship's buffer jet, "
-        "\n\twhich was originally used to dock with your starship. "
-        "\n\t Try to rely on it to return to the atmosphere! \n\n\n"
-);
-    GetchAfterFlush();
-    PF_system_cls();
-    printf("\n\n\n\tPress the up arrow key to accelerate upwards, "
-        "\n\tpress the down arrow key to force a constant speed, "
-        "\n\tand press the right arrow key to do a backflip! \n\n\n");
-    GetchAfterFlush();
-    PF_system_cls();
-    printf("\n\n\n\tYou are currently 1000km away from the safe atmosphere. "
-        "\n\tGood luck!!!\n\n\n");
-    GetchAfterFlush();
-    PF_system_cls();
-    return;
-}
-
-void GetchAfterFlush(){
-    FlashBuffer();
-    PF_Sleep(WORDS_MOVE_TIME);
-    PF_getch();
     return;
 }
 
