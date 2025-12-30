@@ -65,10 +65,24 @@ menu_t EnterHelp(){
     return MAIN_MENU;
 }
 menu_t EnterScoreboard(){
-    return 0;
+    bool reback = false;
+    while (true) {
+    reback = ShowEnterScoreboard();
+    if (reback == true){
+        break;
+    }
+    }
+    return MAIN_MENU;
 }
 menu_t EnterSettings(){
-    return 0;
+    bool reback = false;
+    while (true) {
+    reback = ShowSettings();
+    if (reback == true){
+        break;
+    }
+    }
+    return MAIN_MENU;
 }
 menu_t EnterExit(){
     return 0;

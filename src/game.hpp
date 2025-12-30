@@ -18,10 +18,11 @@ void GenerateObstacle();
 void Draw(player*, screen*);
 void Input(player*);
 void Logic(player*, screen*);
-void AutoSleep(timer*);
+void AutoPF_Sleep(timer*);
 void HideCursor();
 void SetConsoleFullscreen();
 bool End(player*);
+void UpRecord(char*, tm*, int); 
 
 
 void Setup(player *P, screen *Screen, timer *Timer){
@@ -35,7 +36,7 @@ void Setup(player *P, screen *Screen, timer *Timer){
     // generate random obstacle file
     GenerateObstacle();
     PF_system_cls();
-//    Sleep(READY_TIME);
+//    PF_Sleep(READY_TIME);
     return;
 }
 
@@ -45,6 +46,7 @@ void GenerateObstacle(){;
     int buffer[BOUND] = {F_SPACE};
     if((fp = fopen("../data/random_data.txt", "w+")) == NULL){
         printf("file open error!\n");
+        PF_Sleep(ERROR_TIME);
         return;
     }
     srand((unsigned)time(NULL));
@@ -65,6 +67,7 @@ void GenerateObstacle(){;
     }
     if(fclose(fp) != 0){
         printf("file close error!\n");
+        PF_Sleep(ERROR_TIME);
         return;
     }
     return;
@@ -78,8 +81,8 @@ void Draw(player *P, screen *Screen){
     Screen->ScreenDisplay(&Screen->mem);
     printf("\nAvoid those space debris!!!\n");        
     printf("%d km away from the atmosphere\n",WIN_CONDITION - P->mem.score);        // display score and usage
-    printf("pos = %d\n", Screen->mem.obstacle_pos);         // debug info
-    printf("press W or up-direction key to jump, X to quit\n");
+//    printf("pos = %d\n", Screen->mem.obstacle_pos);         // debug info
+    printf("press W or UP key to jump, DOWN key to keep falling speed\n");
     return;
 }
 
@@ -142,7 +145,7 @@ void Logic(player *P, screen *Screen){
 
 void AutoSleep(timer *Timer){
     Timer->FlashRTS(&Timer->mem);         // flash Real Time Stemp
-    if(Timer->GetTimeGap(&Timer->mem) < 0){   // if program time is less than real time, sleep to wait program time
+    if(Timer->GetTimeGap(&Timer->mem) < 0){   // if program time is less than real time, PF_sleep to wait program time
         PF_Sleep(SLEEP_TIME); // control game pace
         Timer->mem.PTS += SLEEP_TIME;    // flash Program Time Stemp
     }
@@ -151,13 +154,29 @@ void AutoSleep(timer *Timer){
 
 bool End(player *P){
     char key = 0;       // get player's pressed key
+    char player_name[16] = "";  // get player's name
+    int extra_score = 0;
     P->mem.score--;         // descend score because of death
     if(gameOver){
         printf("\ngame over! score: %d\n", P->mem.score);
     } else if(gameWin) {
         printf("\nyou are win!\n");
+        srand((unsigned)time(NULL));
+        extra_score = rand() % 500;
+        printf("\nPlease input your name(less than 15 letters): ");
+        scanf("%s", player_name);
+        {
+            time_t currentTime;
+            struct tm *localTime;
+            char buffer[80];
+
+            time(&currentTime); // get current time
+            localTime = localtime(&currentTime); // turn into formal time
+
+            UpRecord(player_name, localTime, P->mem.score + extra_score);    
+        }
     }
-    printf("press 'q' to quit, \nand 'r' to return start menu...");
+    printf("\npress 'q' to quit, \nand 'r' to return start menu...");
     while((key = PF_getch()) != 'q'){
         if(key == 'r'){
 //            SetConsoleFullscreen();
@@ -169,5 +188,48 @@ bool End(player *P){
     }
     return false;
 }
+
+void UpRecord(char* name, tm* tm, int score){
+    FILE *rank;
+    if ((rank = fopen("../data/rank.txt", "a")) == NULL){
+        cls_printf("\n\n\n\tCan't open Scorebroard!");
+        PF_Sleep(ERROR_TIME);
+        return;
+    }
+    fprintf(rank, " %s %d %d %d %d %d %d \n", name, tm->tm_year + 1900, tm->tm_mon, tm->tm_mday, tm->tm_hour, tm->tm_min, score);
+    if (fclose(rank)) {
+        cls_printf("\n\n\n\tCan't close Scoreboard!");
+        PF_Sleep(ERROR_TIME);
+        return;
+    }
+
+    FILE *num_file;
+    int num;
+    if ((num_file = fopen("../data/num.txt", "r")) == NULL){
+        cls_printf("\n\n\n\tCan't open Scorebroard!");
+        PF_Sleep(ERROR_TIME);
+        return;
+    }
+    fscanf(num_file, "%d", &num);
+    if (fclose(num_file)) {
+        cls_printf("\n\n\n\tCan't close Scoreboard!");
+        PF_Sleep(ERROR_TIME);
+        return;
+    }
+
+    if ((num_file = fopen("../data/num.txt", "w")) == NULL){
+        cls_printf("\n\n\n\tCan't open Scorebroard!");
+        PF_Sleep(ERROR_TIME);
+        return;
+    }
+    fprintf(num_file, "%d", num+1);
+    if (fclose(num_file)) {
+        cls_printf("\n\n\n\tCan't close Scoreboard!");
+        PF_Sleep(ERROR_TIME);
+        return;
+    }
+
+    return;
+} 
 
 #endif

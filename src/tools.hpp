@@ -4,6 +4,9 @@
 #include "config.hpp"
 #include "platform/platform.hpp"
 
+#define MAX(a, b) ((a)>(b)?(a):(b))
+#define MIN(a, b) ((a)>(b)?(b):(a))
+
 // flash input buffer
 void FlashBuffer(int max_char = 1000){
     int i, j, k;
