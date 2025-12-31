@@ -90,20 +90,28 @@ void Input(player *P){
     if (PF__kbhit()){
         switch (PF__getch())
         {
-        case 'w':
-        case 'W':
-        case KEY_UP:        // up-direction key
-            if (P->mem.movement != JUMP){
-                P->mem.movement = JUMP;
-            }
-            break;
-        case 'S':
-        case 's':
-        case KEY_DOWN:    // down-direction key
-            if (P->mem.movement != STOP){
-                P->mem.movement = STOP;
-            }    
-            break;
+            case 'w':
+            case 'W':
+            case KEY_UP:        // up-direction key
+                if (P->mem.movement != JUMP){
+                    P->mem.movement = JUMP;
+                }
+                break;
+            case 'S':
+            case 's':
+            case KEY_DOWN:    // down-direction key
+                if (P->mem.movement != STOP){
+                    P->mem.movement = STOP;
+                }    
+                break;
+            case 'D':
+            case 'd':
+            case KEY_RIGHT:    // right-direction key
+                if (P->mem.movement != SWAP){
+                    swaptimer = 0;
+                    P->mem.movement = SWAP;
+                }    
+                break;
         }
     }
     return;
@@ -120,6 +128,13 @@ void Logic(player *P, screen *Screen){
     } else if (P->mem.movement == STOP){
         newV = INITIAL_SPEED;
         P->mem.movement = NONS;
+    } else if (P->mem.movement == SWAP) {
+        newV = prevV + GA * 2;
+        swaptimer++;
+        if (swaptimer > SWAP_TIME){
+            P->mem.movement = NONS;
+            swaptimer = 0;
+        }
     } else {
         newV = prevV + GA;
     }
@@ -129,7 +144,7 @@ void Logic(player *P, screen *Screen){
     P->mem.v = newV;
     P->mem.y = newY;
 
-    if(P->mem.y <= 0 || P->mem.y >= HEIGHT || Screen->mem.obstacle_hashtable[(int)P->mem.y][INITIAL_WIDTH] == '1'){
+    if(P->mem.y <= 0 || P->mem.y >= HEIGHT || (Screen->mem.obstacle_hashtable[(int)P->mem.y][INITIAL_WIDTH] == '1' && swaptimer == 0)){
         gameOver = TRUE;
         gameWin = FALSE;
     }
@@ -155,14 +170,13 @@ void AutoSleep(timer *Timer){
 bool End(player *P){
     char key = 0;       // get player's pressed key
     char player_name[16] = "";  // get player's name
-    int extra_score = 0;
     P->mem.score--;         // descend score because of death
     if(gameOver){
         printf("\ngame over! score: %d\n", P->mem.score);
     } else if(gameWin) {
         printf("\nyou are win!\n");
         srand((unsigned)time(NULL));
-        extra_score = rand() % 500;
+        P->mem.extra_score += (int)rand() % 500;
         printf("\nPlease input your name(less than 15 letters): ");
         scanf("%s", player_name);
         {
@@ -173,7 +187,7 @@ bool End(player *P){
             time(&currentTime); // get current time
             localTime = localtime(&currentTime); // turn into formal time
 
-            UpRecord(player_name, localTime, P->mem.score + extra_score);    
+            UpRecord(player_name, localTime, P->mem.score + P->mem.extra_score);    
         }
     }
     printf("\npress 'q' to quit, \nand 'r' to return start menu...");

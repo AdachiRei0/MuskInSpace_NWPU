@@ -5,6 +5,7 @@
 typedef struct\
 {\
     int score;\
+    int extra_score;\
     double y;      \
     double v;      \
     double a;      \
@@ -14,6 +15,7 @@ typedef struct\
 \
 void _PlayerInit(player_mem *P){\
     P->score = INITIAL_SCORE;\
+    P->extra_score = INITIAL_EXTRA_SCORE;\
     P->y = INITIAL_H;\
     P->v = INITIAL_SPEED;\
     P->a = GA;\

@@ -8,6 +8,7 @@ typedef struct      \
     char bound[WIDTH+1];                \
     char space[WIDTH+1];        \
     char player_height[WIDTH+1];    \
+    char swap_player_height[WIDTH+1];\
 \
     char obstacle_hashtable[HEIGHT][WIDTH];     \
     unsigned int obstacle_pos;                  \
@@ -21,14 +22,17 @@ void _ScreenInit(screen_mem *Screen){\
     for (int i = 0; i < WIDTH; i++){\
         Screen->bound[i] = '-';\
         Screen->player_height[i] = ' ';\
+        Screen->swap_player_height[i] = ' ';\
         Screen->space[i] = ' ';\
     }\
 \
     Screen->bound[WIDTH] = '\n';\
     Screen->player_height[WIDTH] = '\n';\
+    Screen->swap_player_height[WIDTH] = '\n';\
     Screen->space[WIDTH] = '\n';\
 \
     Screen->player_height[INITIAL_WIDTH] = 'P';\
+    Screen->swap_player_height[INITIAL_WIDTH] = '_';\
     return;\
 }\
 \
@@ -38,7 +42,12 @@ void _FillScreen(screen_mem *Screen, int height){\
     for(int i = 1; i < HEIGHT - 1; i++){\
         memcpy(Screen->buffer[i], Screen->space, WIDTH + 1);\
     }\
+\
+    if (swaptimer) {\
+        memcpy(Screen->buffer[height], Screen->swap_player_height, WIDTH + 1);\
+    } else {\
     memcpy(Screen->buffer[height], Screen->player_height, WIDTH + 1);\
+    }\
 \
     Screen->buffer[HEIGHT-1][WIDTH] = '\0';\
 \

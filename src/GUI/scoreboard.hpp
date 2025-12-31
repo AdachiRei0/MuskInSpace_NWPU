@@ -123,7 +123,7 @@ bool ShowEnterScoreboard(){
         PF_Sleep(ERROR_TIME);
         goto done;
     }
-    printf("\n\n\n%16s|%16s|%7s\n", "name", "win time", "scores" );
+    printf("\n\n\n%16s|%-16s|%-7s\n", "name", "win time", "scores" );
     for (i = 0; i < bound; i++){
         fscanf(board, "%s%d%d%d%d%d%d", tmp.name, &tmp.time.y, &tmp.time.m, &tmp.time.d, &tmp.time.h, &tmp.time.min, &tmp.score);
         printf("%16s %4d %2d %2d %2d %2d %7d" "\n", tmp.name, tmp.time.y, tmp.time.m, tmp.time.d, tmp.time.h, tmp.time.min, tmp.score);
