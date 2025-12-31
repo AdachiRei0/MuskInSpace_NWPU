@@ -22,8 +22,8 @@ void ShowPlot(){
         "\n\tand press the right arrow key to do a backflip! \n\n\n");
     GetchAfterFlush();
     PF_system_cls();
-    printf("\n\n\n\tYou are currently 1000km away from the safe atmosphere. "
-        "\n\tGood luck!!!\n\n\n");
+    printf("\n\n\n\tYou are currently %d km away from the safe atmosphere. "
+        "\n\tGood luck!!!\n\n\n", WIN_CONDITION);
     GetchAfterFlush();
     PF_system_cls();
     return;

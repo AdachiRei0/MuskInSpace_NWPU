@@ -45,9 +45,12 @@ void CallStartMenu(){
 }
 
 menu_t EnterMainMenu(){
-    return ShowMenu();
+    PF_MusicPlay("../music/mainmenu.wav");    // play music
+    menu_t choice = ShowMenu();
+    return choice;
 }
 menu_t EnterStartGame(){
+    PF_MusicPlay("../music/startgame.wav");   // play music
     bool restart = false;
     ShowPlot();         // show plot
     PF_system_cls();

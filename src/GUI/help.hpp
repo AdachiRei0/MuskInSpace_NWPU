@@ -15,7 +15,9 @@ bool ShowHelp(){
                "\tObjective:\n"
                "\tSuccessfully return to the atmosphere while avoiding obstacles.\n\n"
                "\tGood luck, and may the stars guide you home!\n"
-               "\t=====================\n\n\n");
+               "\t======= MUSIC =======\n"
+                "\tbgm in main menu: (no name)\n"
+                "\tsource:https://www.bilibili.com/video/BV1Bs411C7Lh?spm_id_from=333.788.videopod.episodes&vd_source=04b014652439b6a198699f29431abe4f&p=21\n");
 //    GetchAfterFlush();
     PF__getch();
     return true;

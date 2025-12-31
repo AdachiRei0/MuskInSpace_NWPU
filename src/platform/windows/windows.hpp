@@ -4,12 +4,20 @@
 #include "../../config.hpp"
 #include <windows.h>
 #include <conio.h>
+#include <mmsystem.h>
+#pragma comment(lib, "winmm.lib")
 
 #define KEY_UP 72       // up-direction key
 #define KEY_DOWN 80     // down-direction key
 #define KEY_RIGHT 77    // right-direction key
 #define KEY_LEFT 75     // left-direction key
 #define KEY_ENTER 13    // enter key
+
+#define PF_MusicStop() PlaySound(NULL, NULL, 0);
+#define PF_MusicPlay(filename) \
+PF_MusicStop(); \
+PlaySound(TEXT(filename), NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
+
 
 void HideCursor() {
     HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);

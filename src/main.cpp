@@ -3,7 +3,7 @@
 
 int main() {
     CallStartMenu();    // start menu
-    menu_t menu = ShowMenu();         // show main menu
+    menu_t menu = EnterMainMenu();         // show main menu
     while (true) {
         if (menu == EXIT) {
             PF_system_cls();    // clear screen

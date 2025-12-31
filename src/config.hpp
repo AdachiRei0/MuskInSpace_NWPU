@@ -23,13 +23,13 @@ typedef int menu_t;
 #define INITIAL_EXTRA_SCORE 0     // initial extra score
 #define INITIAL_SPEED 0     // initial speed
 #define INITIAL_H 20        // initial height of player
-#define WIN_CONDITION 1000      // score to win
+#define WIN_CONDITION 3000      // score to win
 #define ERROR_TIME 1000     // time show information of error
 #define READY_TIME 5000     // time before game starts
 #define WORDS_MOVE_TIME 400     // time of words moving
 #define THANK_TIME 1000        // time of thank you words
 #define F 5000       // frequency of obstacle appearance
-#define BOUND 150000    // boundary of obstacle file
+#define BOUND 450000    // boundary of obstacle file
 #define MAP_BOUND ((WIDTH + 1) * WIN_CONDITION)    // boundary of obstacle file
 #define SLEEP_TIME 5    // time of each frame
 #define PRESS_TIME 100      // time of pressing key
@@ -56,5 +56,6 @@ typedef int menu_t;
 int gameOver = FALSE;       // global game condition
 int gameWin = FALSE;
 int swaptimer = 0;
+char music[20] = "none.wav";    
 
 #endif
