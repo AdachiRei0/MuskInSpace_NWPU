@@ -126,7 +126,7 @@ bool ShowEnterScoreboard(){
     printf("\n\n\n%16s|%-16s|%-7s\n", "name", "win time", "scores" );
     for (i = 0; i < bound; i++){
         fscanf(board, "%s%d%d%d%d%d%d", tmp.name, &tmp.time.y, &tmp.time.m, &tmp.time.d, &tmp.time.h, &tmp.time.min, &tmp.score);
-        printf("%16s %4d %2d %2d %2d %2d %7d" "\n", tmp.name, tmp.time.y, tmp.time.m, tmp.time.d, tmp.time.h, tmp.time.min, tmp.score);
+        printf("%16s %04d.%02d.%02d %02d:%02d %07d" "\n", tmp.name, tmp.time.y, tmp.time.m, tmp.time.d, tmp.time.h, tmp.time.min, tmp.score);
     }
     if (fclose(board)) {
         cls_printf("\n\n\n\tCan't close Scoreboard!");

@@ -26,9 +26,9 @@ typedef int menu_t;
 #define WIN_CONDITION 3000      // score to win
 #define ERROR_TIME 1000     // time show information of error
 #define READY_TIME 5000     // time before game starts
-#define WORDS_MOVE_TIME 400     // time of words moving
+#define WORDS_MOVE_TIME 650     // time of words moving
 #define THANK_TIME 1000        // time of thank you words
-#define F 5000       // frequency of obstacle appearance
+#define F 2000       // frequency of obstacle appearance
 #define BOUND 450000    // boundary of obstacle file
 #define MAP_BOUND ((WIDTH + 1) * WIN_CONDITION)    // boundary of obstacle file
 #define SLEEP_TIME 5    // time of each frame

@@ -33,6 +33,7 @@ menu_t (*MenuFunctions[])() = {
 }; 
 
 void CallStartMenu(){
+    PF_MusicPlay("../music/boot.wav");   // play music
     PF_SetConsoleOutputCP(65001);
     SetConsoleFullscreen();
     HideCursor();

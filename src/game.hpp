@@ -171,6 +171,7 @@ bool End(player *P){
     char key = 0;       // get player's pressed key
     char player_name[16] = "";  // get player's name
     P->mem.score--;         // descend score because of death
+    PF_MusicStop();
     if(gameOver){
         printf("\ngame over! score: %d\n", P->mem.score);
     } else if(gameWin) {
@@ -210,7 +211,7 @@ void UpRecord(char* name, tm* tm, int score){
         PF_Sleep(ERROR_TIME);
         return;
     }
-    fprintf(rank, " %s %d %d %d %d %d %d \n", name, tm->tm_year + 1900, tm->tm_mon, tm->tm_mday, tm->tm_hour, tm->tm_min, score);
+    fprintf(rank, " %s %d %d %d %d %d %d \n", name, tm->tm_year + 1900, tm->tm_mon + 1, tm->tm_mday, tm->tm_hour, tm->tm_min, score);
     if (fclose(rank)) {
         cls_printf("\n\n\n\tCan't close Scoreboard!");
         PF_Sleep(ERROR_TIME);
